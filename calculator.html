@@ -234,31 +234,26 @@
         </div>
 
         <div class="buttons">
-            <!-- Row 1 -->
             <button class="btn-function" onclick="clearAll()">AC</button>
             <button class="btn-function" onclick="toggleSign()">+/-</button>
             <button class="btn-function" onclick="appendOperator('%')">%</button>
             <button class="btn-operator" onclick="appendOperator('÷')">÷</button>
             
-            <!-- Row 2 -->
             <button class="btn-number" onclick="appendNumber('7')">7</button>
             <button class="btn-number" onclick="appendNumber('8')">8</button>
             <button class="btn-number" onclick="appendNumber('9')">9</button>
             <button class="btn-operator" onclick="appendOperator('×')">×</button>
             
-            <!-- Row 3 -->
             <button class="btn-number" onclick="appendNumber('4')">4</button>
             <button class="btn-number" onclick="appendNumber('5')">5</button>
             <button class="btn-number" onclick="appendNumber('6')">6</button>
             <button class="btn-operator" onclick="appendOperator('-')">-</button>
             
-            <!-- Row 4 -->
             <button class="btn-number" onclick="appendNumber('1')">1</button>
             <button class="btn-number" onclick="appendNumber('2')">2</button>
             <button class="btn-number" onclick="appendNumber('3')">3</button>
             <button class="btn-operator" onclick="appendOperator('+')">+</button>
             
-            <!-- Row 5 -->
             <button class="btn-number btn-zero" onclick="appendNumber('0')">0</button>
             <button class="btn-number" onclick="appendDecimal()">.</button>
             <button class="btn-equals" onclick="calculate()">=</button>
@@ -414,7 +409,6 @@
             updateHistoryDisplay();
         }
 
-        // Keyboard support
         document.addEventListener('keydown', (e) => {
             if (e.key >= '0' && e.key <= '9') appendNumber(e.key);
             else if (e.key === '.') appendDecimal();
